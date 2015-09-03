@@ -16,7 +16,7 @@
 #
 
 barclamp:
-  name: 'nova_dashboard'
+  name: 'horizon'
   display: 'Horizon'
   description: 'OpenStack Dashboard: Web User Interface to access, provision and automate Cloud-based resources'
   version: 0
@@ -37,4 +37,4 @@ crowbar:
   proposal_schema_version: 3
 
 git_repo:
-  - 'nova_dashboard https://github.com/openstack/horizon.git stable/juno'
+  - 'horizon https://github.com/openstack/horizon.git stable/juno'

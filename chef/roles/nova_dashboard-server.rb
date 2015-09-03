@@ -1,8 +1,8 @@
-name "nova_dashboard-server"
+name "horizon-server"
 description "Nova Dashboard Server Role"
 run_list(
-         "recipe[nova_dashboard::server]",
-         "recipe[nova_dashboard::monitor]"
+         "recipe[horizon::server]",
+         "recipe[horizon::monitor]"
 )
 default_attributes()
 override_attributes()

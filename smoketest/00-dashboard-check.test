@@ -37,19 +37,19 @@ class TestDashboardBasicOps(object):
   def __init__(self, user, passwd):
     self.user = user
     self.passwd = passwd
-    cmd = "knife search node roles:nova_dashboard-server -F json -a nova_dashboard.apache.ssl"
+    cmd = "knife search node roles:horizon-server -F json -a horizon.apache.ssl"
     p = subprocess.Popen(cmd.split(" "), stdout=subprocess.PIPE)
     out = p.communicate()[0]
     err = p.returncode
     if err != 0:
-      raise Exception("nova_dashboard-server not found")
+      raise Exception("horizon-server not found")
     try:
       out = json.loads(out)
     except:
       raise Exception("Unable to parse knife output " + out)
     if out['results'] != 1:
       raise Exception("There is " + out['results'] + "dashboard servers found")
-    if out['rows'][0]['nova_dashboard.apache.ssl']:
+    if out['rows'][0]['horizon.apache.ssl']:
       proto = "https"
     else:
       proto = "http"

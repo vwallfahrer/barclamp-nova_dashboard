@@ -26,8 +26,8 @@ root:
     format: 'markdown'
 
   barclamps:
-    nova_dashboard:
+    horizon:
       topic_meta_data:
         file: 'index'
-        url: '/crowbar/openstack/1.0?selected=nova_dashboard'
+        url: '/crowbar/openstack/1.0?selected=horizon'
         order: 100
